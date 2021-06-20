@@ -1,5 +1,15 @@
+import React from 'react'
 import Nav from './Nav'
 const Home = () =>{
+    constructor(){
+        super();
+        this.state = {
+            add:'',
+            sub:'',
+            mul:'',
+            div:''
+        }
+    };
     return(
         <div>
             <Nav />
