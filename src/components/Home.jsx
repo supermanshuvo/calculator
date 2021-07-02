@@ -98,6 +98,10 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
+        <p className="text-center font-weight-bold">
+          Create by{" "}
+          <a href="https://www.facebook.com/supermanshuvo/">Rezaul Karim</a>
+        </p>
       </div>
     );
   }
