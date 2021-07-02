@@ -7,12 +7,18 @@ class Home extends React.Component {
       firstNumber: "",
       secondNumber: "",
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange = (event) => {
     let inputName = event.target.name;
     let inputValue = event.target.value;
     this.setState({ [inputName]: inputValue });
   };
+  handleSubmit(event) {
+    alert(this.state.firstNumber + " " + this.state.secondNumber);
+    event.preventDefault();
+  }
   render() {
     return (
       <div>
@@ -23,7 +29,7 @@ class Home extends React.Component {
               Welcome to The Basic Calculator
             </h1>
             <div className="col-md-6">
-              <form>
+              <form onSubmit={this.handleSubmit}>
                 <h4>Enter your value</h4>
                 <label htmlFor="inputNumber" className="form-label">
                   Enter First Number:
@@ -47,12 +53,18 @@ class Home extends React.Component {
                   id="secondNumber"
                   placeholder="Enter your number"
                 />
+                <br></br>
+                <input
+                  type="submit"
+                  value="Submit"
+                  className="btn btn-primary"
+                />
               </form>
             </div>
             <div className="col-md-6">
               <h4 className="mb-4">Result</h4>
               <p>
-                Addition : <span>{this.state.firstNumber}</span>
+                Addition : <span>{this.state.add}</span>
               </p>
               <p>
                 Subtraction : <span>{this.state.secondNumber}</span>
