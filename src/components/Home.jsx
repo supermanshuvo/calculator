@@ -1,13 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      firstNumber: "",
-      secondNumber: "",
-    };
-  }
   render() {
     return (
       <div>
@@ -25,8 +18,6 @@ class Home extends React.Component {
                 </label>
                 <input
                   type="number"
-                  value={this.state.number1}
-                  onChange={this.handleChange}
                   className="form-control"
                   name="firstNumber"
                   id="firstNumber"
@@ -37,8 +28,6 @@ class Home extends React.Component {
                 </label>
                 <input
                   type="number"
-                  value={this.state.number2}
-                  onChange={this.handleChange}
                   className="form-control"
                   name="secondNumber"
                   id="secondNumber"
@@ -52,7 +41,7 @@ class Home extends React.Component {
                 Addition : <span></span>
               </p>
               <p>
-                Subtraction : <span>{this.state.secondNumber}</span>
+                Subtraction : <span></span>
               </p>
               <p>
                 Multiply : <span></span>
