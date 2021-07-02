@@ -8,7 +8,11 @@ class Home extends React.Component {
       secondNumber: "",
     };
   }
-  handleChange = () => {};
+  handleChange = (event) => {
+    let inputName = event.target.name;
+    let inputValue = event.target.value;
+    this.setState({ [inputName]: inputValue });
+  };
   render() {
     return (
       <div>
@@ -48,7 +52,7 @@ class Home extends React.Component {
             <div className="col-md-6">
               <h4 className="mb-4">Result</h4>
               <p>
-                Addition : <span></span>
+                Addition : <span>{this.state.firstNumber}</span>
               </p>
               <p>
                 Subtraction : <span>{this.state.secondNumber}</span>
