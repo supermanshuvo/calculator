@@ -93,7 +93,7 @@ class Home extends React.Component {
                 Multiply : <span>{this.state.mul}</span>
               </p>
               <p>
-                Division : <span></span>
+                Division : <span>{this.state.div}</span>
               </p>
             </div>
           </div>
