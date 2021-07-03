@@ -24,7 +24,11 @@ class Home extends React.Component {
     let sNum = parseFloat(this.state.secondNumber);
     let addTotal = fNum + sNum;
     let subTotal = fNum - sNum;
-    if (sNum < 1) {
+    if (isNaN(fNum) || isNaN(sNum)) {
+      let warring = "Kindly Enter number only";
+      this.setState({ add: warring, sub: warring, mul: warring, div: warring });
+      event.preventDefault();
+    } else if (sNum < 1) {
       let warring = "Kindly Enter more then zero";
       this.setState({ add: addTotal, sub: subTotal, mul: warring });
     } else {
