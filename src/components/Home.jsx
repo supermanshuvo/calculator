@@ -20,6 +20,7 @@ class Home extends React.Component {
     this.setState({ [inputName]: inputValue });
   };
   handleSubmit(event) {
+    event.preventDefault();
     let fNum = parseFloat(this.state.firstNumber);
     let sNum = parseFloat(this.state.secondNumber);
     let addTotal = fNum + sNum;
@@ -27,7 +28,6 @@ class Home extends React.Component {
     if (isNaN(fNum) || isNaN(sNum)) {
       let warring = "Kindly Enter numbers!";
       this.setState({ add: warring, sub: warring, mul: warring, div: warring });
-      event.preventDefault();
     } else if (sNum < 1) {
       let warring = "Kindly Enter more then zero!";
       this.setState({ add: addTotal, sub: subTotal, mul: warring });
@@ -40,7 +40,6 @@ class Home extends React.Component {
         mul: mulTotal,
         div: divTotal,
       });
-      event.preventDefault();
     }
   }
   render() {
