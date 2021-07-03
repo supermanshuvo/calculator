@@ -55,7 +55,7 @@ class Home extends React.Component {
                   Enter First Number:
                 </label>
                 <input
-                  type="number"
+                  type="text"
                   onChange={this.handleChange}
                   className="form-control"
                   name="firstNumber"
@@ -66,7 +66,7 @@ class Home extends React.Component {
                   Enter Second Number:
                 </label>
                 <input
-                  type="number"
+                  type="text"
                   onChange={this.handleChange}
                   className="form-control"
                   name="secondNumber"
